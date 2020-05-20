@@ -1,3 +1,5 @@
+![Node.js CI](https://github.com/kallyas/favicons.js/workflows/Node.js%20CI/badge.svg)
+
 # favicons.js
 Given a HTML5 canvas return an ICO formatted favicon.
 
