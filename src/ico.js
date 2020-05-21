@@ -1,5 +1,10 @@
 import Canvas from "./canvas.js";
-
+/**
+ *
+ *
+ * @export
+ * @class Ico
+ */
 export default class Ico {
 
   constructor(canvas, sizes = [16, 32, 48]) {
@@ -54,8 +59,14 @@ export default class Ico {
     }
     return offset;
   }
-
-  createBitmapImageData(canvas) {
+/**
+ *
+ *
+ * @param {*} canvas
+ * @returns
+ * @memberof Ico
+ */
+createBitmapImageData(canvas) {
     const ctx = canvas.getContext("2d");
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     const bitmapPixelData = new Uint32Array(imageData.data.buffer);
@@ -66,8 +77,14 @@ export default class Ico {
     binary += this.Uint8ArrayToBinary(bitmapMask);
     return binary;
   }
-
-  canvasToBitmap(canvas) {
+/**
+ *
+ *
+ * @param {*} canvas
+ * @returns
+ * @memberof Ico
+ */
+canvasToBitmap(canvas) {
     const ctx = canvas.getContext("2d");
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     const rgbaData8 = imageData.data;
@@ -96,8 +113,14 @@ export default class Ico {
     }
     return bgraData32Rotated.buffer;
   }
-
-  createIconDirectoryHeader(numImages) {
+/**
+ *
+ *
+ * @param {*} numImages
+ * @returns
+ * @memberof Ico
+ */
+createIconDirectoryHeader(numImages) {
     const buffer = new ArrayBuffer(6);
     const view = new DataView(buffer);
     view.setUint16(0, 0, true); // Reserved. Must always be 0.
@@ -105,8 +128,17 @@ export default class Ico {
     view.setUint16(4, numImages, true); // Number of images.
     return this.arrayBufferToBinary(buffer);
   }
-
-  createIconDirectoryEntry(width, height, size, offset) {
+/**
+ *
+ *
+ * @param {*} width
+ * @param {*} height
+ * @param {*} size
+ * @param {*} offset
+ * @returns
+ * @memberof Ico
+ */
+createIconDirectoryEntry(width, height, size, offset) {
     const buffer = new ArrayBuffer(16);
     const view = new DataView(buffer);
     view.setUint8(0, width); // Pixel width (0..256). 0 = 256 pixels.
@@ -119,8 +151,15 @@ export default class Ico {
     view.setUint32(12, offset, true); // Offset to BMP of PNG.
     return this.arrayBufferToBinary(buffer);
   }
-
-  createBitmapInfoHeader(width, height) {
+/**
+ *
+ *
+ * @param {*} width
+ * @param {*} height
+ * @returns
+ * @memberof Ico
+ */
+createBitmapInfoHeader(width, height) {
     const buffer = new ArrayBuffer(40);
     const view = new DataView(buffer);
     view.setUint32(0, 40, true); // Header size (40 bytes).
@@ -136,8 +175,14 @@ export default class Ico {
     view.setUint32(36, 0, true); // Number of important colors. 0 =  all
     return this.arrayBufferToBinary(buffer);
   }
-
-  arrayBufferToBinary(buffer) {
+/**
+ *
+ *
+ * @param {*} buffer
+ * @returns
+ * @memberof Ico
+ */
+arrayBufferToBinary(buffer) {
     let binary = "";
     const bytes = new Uint8Array(buffer);
     const len = bytes.byteLength;
@@ -146,8 +191,14 @@ export default class Ico {
     }
     return binary;
   }
-
-  Uint8ArrayToBinary(Uint8Array) {
+/**
+ *
+ *
+ * @param {*} Uint8Array
+ * @returns
+ * @memberof Ico
+ */
+Uint8ArrayToBinary(Uint8Array) {
     let binary = "";
     const bytes = Uint8Array;
     const len = bytes.byteLength;
