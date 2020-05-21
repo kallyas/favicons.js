@@ -1,4 +1,4 @@
-![Node.js CI](https://github.com/kallyas/favicons.js/workflows/Node.js%20CI/badge.svg)
+![Node.js CI](https://github.com/kallyas/favicons.js/workflows/Node.js%20CI/badge.svg) [![Build Status](https://travis-ci.com/kallyas/favicons.js.svg?branch=master)](https://travis-ci.com/kallyas/favicons.js)
 
 # favicons.js
 Given a HTML5 canvas return an ICO formatted favicon.
