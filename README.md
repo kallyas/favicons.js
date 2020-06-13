@@ -1,6 +1,7 @@
 ![Node.js CI](https://github.com/kallyas/favicons.js/workflows/Node.js%20CI/badge.svg) [![Build Status](https://travis-ci.com/kallyas/favicons.js.svg?branch=master)](https://travis-ci.com/kallyas/favicons.js)
 
 # favicons.js
+
 Given a HTML5 canvas return an ICO formatted favicon.
 
 Usage
@@ -11,7 +12,9 @@ Generate an ICO file from a <canvas> element. Initialize a Favicon.Ico object wi
 const ico = new Favicon.Ico(canvas);
 const dataurl = ico.generate([16, 32, 48]);
 ```
+
 ## Generate PNG
+
 Generate a PNG file from a canvas element. Initialize a Favicon.Png object with a canvas element. The canvas should be square for best results. Pass the generate method the size that should be generated.
 
 ```js
@@ -20,11 +23,13 @@ const dataurl = png.generate(32);
 ```
 
 ## Generate Package
+
 Generate multiple favicon format based on current best practices. Pass Favicon.Package a canvas element and it will return a dictionary of dataurls.
 
 ```js
-var package = Favicon.Package(canvas);
+let package = Favicon.Package(canvas);
 ```
+
 The package will contain the follow keys which map to common favicon formats.
 
 ```js
@@ -35,7 +40,9 @@ png180 - apple-touch-icon.png
 png192 - android-chrome-192x192.png
 png512 - android-chrome-512x512.png
 ```
+
 ## Example
+
 The example below will generate an ICO formatted favicon that includes 3 sizes: 16x16, 32x32, and 48x48 pixels. The full example can be found here.
 
 ## Preview
@@ -69,3 +76,7 @@ const download = document.getElementById("download");
 download.href = dataurl;
 download.setAttribute("download", "favicon.ico");
 ```
+
+### Licence
+
+MIT
