@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Favicons.js is a lightweight library that allows you to create an ICO formatted favicon from a canvas element.",
   "private": false,
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "directories": {
     "example": "examples"
   },
