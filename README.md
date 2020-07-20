@@ -1,4 +1,4 @@
-![Node.js CI](https://github.com/kallyas/favicons.js/workflows/Node.js%20CI/badge.svg) [![Build Status](https://travis-ci.com/kallyas/favicons.js.svg?branch=master)](https://travis-ci.com/kallyas/favicons.js) [![CircleCI](https://circleci.com/gh/kallyas/favicons.js.svg?style=svg)](https://app.circleci.com/pipelines/github/kallyas/favicons.js)
+![Node.js CI](https://github.com/kallyas/favicons.js/workflows/Node.js%20CI/badge.svg) [![Build Status](https://travis-ci.com/kallyas/favicons.js.svg?branch=master)](https://travis-ci.com/kallyas/favicons.js) [![CircleCI](https://circleci.com/gh/kallyas/favicons.js.svg?style=svg)](https://app.circleci.com/pipelines/github/kallyas/favicons.js) [![Maintainability](https://api.codeclimate.com/v1/badges/cad1e9721782a2b601ce/maintainability)](https://codeclimate.com/github/kallyas/favicons.js/maintainability)
 
 # favicons.js
 
