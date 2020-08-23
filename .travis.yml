@@ -3,6 +3,8 @@ node_js:
   - 6
   - 8
   - 10
+  - 12
+  - 14
 os:
   - linux
   - osx
@@ -10,5 +12,5 @@ os:
 notifications:
   webhooks: https://www.travisbuddy.com
 env:
-- MY_VAR=EverythignIsAwesome
-- NODE_ENV=TEST
+  - MY_VAR=EverythignIsAwesome
+  - NODE_ENV=TEST
