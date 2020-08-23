@@ -1,6 +1,12 @@
 language: node_js
 node_js:
- - "node"
+  - 6
+  - 8
+  - 10
+os:
+  - linux
+  - osx
+  - windows
 notifications:
   webhooks: https://www.travisbuddy.com
 env:
