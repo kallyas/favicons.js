@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/kallyas/favicons.js#readme",
   "devDependencies": {
-    "webpack": "^4.29.3",
+    "webpack": "^5.1.2",
     "webpack-cli": "^4.0.0"
   }
 }
